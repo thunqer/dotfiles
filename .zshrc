@@ -13,22 +13,30 @@ export PATH=/opt/homebrew/bin:$PATH # homebrew - this line needs to be updated d
 export PATH=$PATH:~/.emacs.d/bin/ # doom commands
 for d in "$(brew --prefix)"/opt/*/libexec/gnubin; do export PATH=$d:$PATH; done
 for d in "$(brew --prefix)"/opt/*/libexec/gnuman; do export MANPATH=$d:$MANPATH; done
+
 ## nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 ## python
 PATH="$PATH:/Users/sayeef/Library/Python/3.8/bin"
 
-## updating core utils
+## updating core utils & related
 alias ls="exa -laT --icons --group-directories-first --level=1 --inode --git"
 alias du="dust"
 alias df="duf"
 alias find="fd"
-alias grep="ripgrep"
+alias grep="rg"
 alias s="broot"
 alias man2="tldr"
 alias man3="cheat"
 alias ping="gping"
 alias dig="dog"
+
+## aliases
 alias src="source ~/.zshrc"
+alias tm="tmux attach -t main"
+
+## prompt
+PROMPT='%{$fg[blue]%}[%D{%L:%M:%S %p}] '$PROMPT

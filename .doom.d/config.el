@@ -23,22 +23,15 @@
   :config
   (setq! doom-font (font-spec :family "Iosevka" :size 16)
          doom-variable-pitch-font (font-spec :family "Iosevka" :size 12)
-         doom-theme 'doom-city-lights
+         doom-theme 'doom-nord
          doom-treemacs-theme 'doom-colors))
-(custom-theme-set-faces! 'doom-tokyo-night
-  '(font-lock-function-name-face :foreground "#D6BA73" :weight bold)
-  ;'(font-lock-function-name-face :foreground "#d55d92" :weight bold)
-  '(font-lock-string-face :foreground "#545775")
-  '(font-lock-comment-face :foreground "#292D3E" :inherit italic)
-  '(font-lock-variable-name-face :foreground "#574AE2" :weight bold)
-  '(font-lock-type-face :foreground "#0e9594" :weight bold)
-  '(font-lock-keyword-face :foreground "#476C9B" :weight bold)
-  '(font-lock-builtin-face :foreground "#476C9B" :inherit italic)
-  '(font-lock-warning-face :foreground "#DA667B")
-  '(font-lock-constant-face :foreground "#5887FF")
-  '(fill-column-indicator :foreground "#13141c")
-  '(treemacs-root-face :inherit font-lock-variable-name-face)
-  '(doom-themes-treemacs-root-face :inherit font-lock-variable-name-face))
+(custom-theme-set-faces! 'doom-nord
+  '(font-lock-type-face :weight bold)
+  '(font-lock-function-name-face :weight bold)
+  '(font-lock-variable-name-face :foreground "#88C0D0" :inherit italic)
+  '(font-lock-comment-face :foreground "#505966" :inherit italic)
+  '(font-lock-builtin-face :foreground "#81a1c1" :weight bold)
+  '(font-lock-keyword-face :foreground "#81a1c1" :weight bold :inherit italic))
 
 ;;;; modeline
 (use-package! doom-modeline
