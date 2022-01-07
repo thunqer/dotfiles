@@ -6,12 +6,13 @@
       "C-c k" 'kill-current-buffer
       "C-c s p b" 'switch-to-prev-buffer)
 (setq! display-line-numbers-type t
-      mac-command-modifier 'meta)
+       mac-command-modifier 'meta)
+(add-hook! 'emacs-startup-hook 'toggle-frame-fullscreen)
 
 ;; Doom core configuration
 
 (setq! doom-leader-alt-key "C-d"
-      doom-localleader-alt-key "C-d l")
+       doom-localleader-alt-key "C-d l")
 
 ;; Doom module configuration
 
@@ -22,7 +23,7 @@
   :config
   (setq! doom-font (font-spec :family "Iosevka" :size 16)
          doom-variable-pitch-font (font-spec :family "Iosevka" :size 12)
-         doom-theme 'doom-tokyo-night
+         doom-theme 'doom-city-lights
          doom-treemacs-theme 'doom-colors))
 (custom-theme-set-faces! 'doom-tokyo-night
   '(font-lock-function-name-face :foreground "#D6BA73" :weight bold)
@@ -49,4 +50,3 @@
   :config
   (add-hook! 'magit-post-stage-hook 'git-gutter:update-all-windows)
   (add-hook! 'magit-post-unstage-hook 'git-gutter:update-all-windows))
-

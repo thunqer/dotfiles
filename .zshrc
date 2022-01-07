@@ -20,6 +20,15 @@ export NVM_DIR="$HOME/.nvm"
 ## python
 PATH="$PATH:/Users/sayeef/Library/Python/3.8/bin"
 
-alias ls="ls -l --color"
-alias lsa="ls -Al --color"
+## updating core utils
+alias ls="exa -laT --icons --group-directories-first --level=1 --inode --git"
+alias du="dust"
+alias df="duf"
+alias find="fd"
+alias grep="ripgrep"
+alias s="broot"
+alias man2="tldr"
+alias man3="cheat"
+alias ping="gping"
+alias dig="dog"
 alias src="source ~/.zshrc"
