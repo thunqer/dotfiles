@@ -16,6 +16,28 @@
 
 ;; Doom module configuration
 
+;;; lang
+
+;;;; java
+
+(use-package! lsp-java
+  :config
+  (setq! lsp-java-vmargs
+         (list
+          "-noverify"
+          "-Xmx1G"
+          "-XX:+UseG1GC"
+          "-XX:+UseStringDeduplication"
+          (concat "-javaagent:" (getenv "HOME") "/dotfiles/lib/lombok.jar"))))
+
+;;; tools
+
+;;;; vterm
+
+(use-package! vterm
+  :config
+  (setq vterm-shell "/bin/zsh"))
+
 ;;; ui
 
 ;;;; doom

@@ -33,6 +33,7 @@
        syntax
 
        :tools
+       (debugger +lsp)
        lookup
        lsp
        magit
@@ -46,6 +47,7 @@
        (python +lsp)
        (sh +lsp)
        emacs-lisp
+       (java +lsp)
 
        :config
        (default +bindings +smartparens))
