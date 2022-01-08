@@ -20,8 +20,7 @@
 
 ;;;; java
 
-(use-package! lsp-java
-  :config
+(after! lsp-java
   (setq! lsp-java-vmargs
          (list
           "-noverify"
@@ -32,11 +31,15 @@
 
 ;;; tools
 
+;;;; lsp
+
+(after! lsp-mode
+  (setq! lsp-enable-file-watchers nil))
+
 ;;;; vterm
 
-(use-package! vterm
-  :config
-  (setq vterm-shell "/bin/zsh"))
+(after! vterm
+  (setq! vterm-shell "/bin/zsh"))
 
 ;;; ui
 
@@ -46,14 +49,14 @@
   (setq! doom-font (font-spec :family "Iosevka" :size 16)
          doom-variable-pitch-font (font-spec :family "Iosevka" :size 12)
          doom-theme 'doom-nord
-         doom-treemacs-theme 'doom-colors))
-(custom-theme-set-faces! 'doom-nord
-  '(font-lock-type-face :weight bold)
-  '(font-lock-function-name-face :weight bold)
-  '(font-lock-variable-name-face :foreground "#88C0D0" :inherit italic)
-  '(font-lock-comment-face :foreground "#505966" :inherit italic)
-  '(font-lock-builtin-face :foreground "#81a1c1" :weight bold)
-  '(font-lock-keyword-face :foreground "#81a1c1" :weight bold :inherit italic))
+         doom-treemacs-theme 'doom-colors)
+  (custom-theme-set-faces! 'doom-nord
+    '(font-lock-type-face :weight bold)
+    '(font-lock-function-name-face :weight bold)
+    '(font-lock-variable-name-face :foreground "#88C0D0" :inherit italic)
+    '(font-lock-comment-face :foreground "#505966" :inherit italic)
+    '(font-lock-builtin-face :foreground "#81a1c1" :weight bold)
+    '(font-lock-keyword-face :foreground "#81a1c1" :weight bold :inherit italic)))
 
 ;;;; modeline
 (use-package! doom-modeline
@@ -61,7 +64,6 @@
   (setq! doom-modeline-height 40))
 
 ;;;; vc-gutter
-(use-package! git-gutter
-  :config
+(after! git-gutter
   (add-hook! 'magit-post-stage-hook 'git-gutter:update-all-windows)
   (add-hook! 'magit-post-unstage-hook 'git-gutter:update-all-windows))
