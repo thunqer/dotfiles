@@ -19,7 +19,7 @@ fi
 
 ## mostly installing better shell functions
 UPDATED_CORE=(coreutils findutils gnu-sed gnutls grep tmux git cmake)
-MODERN_CORE=(exa du duf broot fd ripgrep tldr cheat gping httpie curlie dog)
+MODERN_CORE=(exa du duf broot fd ripgrep tldr cheat gping httpie curlie dog bat)
 OTHER_STUFF=(multimarkdown shellcheck)
 brew install "${UPDATED_CORE[@]}"
 brew install "${MODERN_CORE[@]}"
