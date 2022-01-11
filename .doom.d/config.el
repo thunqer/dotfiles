@@ -29,12 +29,18 @@
           "-XX:+UseStringDeduplication"
           (concat "-javaagent:" (getenv "HOME") "/dotfiles/lib/lombok.jar"))))
 
-;;;; plantuml
+;;;; org
 
 (with-eval-after-load 'org
   (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
   (setq! org-startup-with-inline-images t))
 (add-hook! 'org-mode-hook 'wordsmith-mode)
+(add-hook 'org-mode-hook (lambda() (company-mode -1)))
+
+(use-package! org-brain
+  :config
+  (map! "C-c o b" 'org-brain-visualize))
+
 
 ;;; tools
 
@@ -51,6 +57,7 @@
 ;;; ui
 
 ;;;; doom
+
 (use-package! doom-themes
   :config
   (setq! doom-font (font-spec :family "Iosevka" :size 16)
@@ -65,12 +72,19 @@
     '(font-lock-builtin-face :foreground "#81a1c1" :weight bold)
     '(font-lock-keyword-face :foreground "#81a1c1" :weight bold :inherit italic)))
 
+;;;; magit
+
+(after! magit
+  (add-hook 'magit-mode-hook (lambda() (company-mode -1))))
+
 ;;;; modeline
+
 (use-package! doom-modeline
   :config
   (setq! doom-modeline-height 40))
 
 ;;;; vc-gutter
+
 (after! git-gutter
   (add-hook! 'magit-post-stage-hook 'git-gutter:update-all-windows)
   (add-hook! 'magit-post-unstage-hook 'git-gutter:update-all-windows))

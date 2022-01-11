@@ -37,6 +37,7 @@
        lookup
        lsp
        magit
+       pdf
        tmux
 
        :os
@@ -44,10 +45,13 @@
        tty
 
        :lang
+       (haskell +lsp)
+       (java +lsp)
+       (java +lsp)
+       (org +pretty +brain)
        (python +lsp)
        (sh +lsp)
        emacs-lisp
-       (java +lsp)
        plantuml
 
        :config

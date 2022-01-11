@@ -24,7 +24,8 @@ export NVM_DIR="$HOME/.nvm"
 PATH="$PATH:/Users/sayeef/Library/Python/3.8/bin"
 
 ## updating core utils & related
-alias ls="exa -laT --icons --group-directories-first --level=1 --inode --git"
+alias ls="exa -laT --icons --group-directories-first --level=1 --inode --git --ignore-glob=\"Downloads|Documents|Desktop|Library|Movies|Music|Pictures|Public\""
+alias lss="exa -lT --icons --group-directories-first --level=1 --inode --git --ignore-glob=\"Downloads|Documents|Desktop|Library|Movies|Music|Pictures|Public\""
 alias cat="bat"
 alias du="dust"
 alias df="duf"
