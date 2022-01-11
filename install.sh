@@ -47,6 +47,9 @@ npm i -g bash-language-server # for sh lsp
 ## oh my zsh - it's just ok
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+## osx syntax highlighting for plain english - intended for org-mode integration
+curl -Ls https://github.com/stephencelis/syn/releases/download/v0.2.1/syn > syn && chmod 755 syn && mv syn /usr/local/bin
+
 # --- link to config in dotfiles/ ---
 rm ~/.zshrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc

@@ -48,6 +48,7 @@
        (sh +lsp)
        emacs-lisp
        (java +lsp)
+       plantuml
 
        :config
        (default +bindings +smartparens))

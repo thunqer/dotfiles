@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 ## brew things
 export PATH=/opt/homebrew/bin:$PATH # homebrew - this line needs to be updated depending on your mac /usr/local or /opt/homebrew
 export PATH=$PATH:~/.emacs.d/bin/ # doom commands
+export PATH=$PATH:~/dotfiles/bin
 for d in "$(brew --prefix)"/opt/*/libexec/gnubin; do export PATH=$d:$PATH; done
 for d in "$(brew --prefix)"/opt/*/libexec/gnuman; do export MANPATH=$d:$MANPATH; done
 

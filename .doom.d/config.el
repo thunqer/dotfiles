@@ -29,6 +29,13 @@
           "-XX:+UseStringDeduplication"
           (concat "-javaagent:" (getenv "HOME") "/dotfiles/lib/lombok.jar"))))
 
+;;;; plantuml
+
+(with-eval-after-load 'org
+  (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
+  (setq! org-startup-with-inline-images t))
+(add-hook! 'org-mode-hook 'wordsmith-mode)
+
 ;;; tools
 
 ;;;; lsp
