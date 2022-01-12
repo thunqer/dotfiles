@@ -63,6 +63,7 @@
   (setq! doom-font (font-spec :family "Iosevka" :size 16)
          doom-variable-pitch-font (font-spec :family "Iosevka" :size 12)
          doom-theme 'doom-nord
+         doom-nord-region-highlight 'frost
          doom-treemacs-theme 'doom-colors)
   (custom-theme-set-faces! 'doom-nord
     '(font-lock-type-face :weight bold)
@@ -74,8 +75,10 @@
 
 ;;;; magit
 
+; TODO figure out why company freezes sometimes
+; not technically magit, but magit-commit takes you to a Text buffer and company freezes sometimes
 (after! magit
-  (add-hook 'magit-mode-hook (lambda() (company-mode -1))))
+  (add-hook 'text-mode-hook (lambda() (company-mode -1))))
 
 ;;;; modeline
 
