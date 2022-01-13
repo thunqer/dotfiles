@@ -20,7 +20,7 @@ fi
 ## mostly installing better shell functions
 UPDATED_CORE=(coreutils findutils gnu-sed gnutls grep tmux git cmake)
 MODERN_CORE=(exa du duf broot fd ripgrep tldr cheat gping httpie curlie dog bat)
-OTHER_STUFF=(multimarkdown shellcheck)
+OTHER_STUFF=(multimarkdown shellcheck llvm)
 brew install "${UPDATED_CORE[@]}"
 brew install "${MODERN_CORE[@]}"
 brew install "${OTHER_STUFF[@]}"
@@ -49,6 +49,12 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 ## osx syntax highlighting for plain english - intended for org-mode integration
 curl -Ls https://github.com/stephencelis/syn/releases/download/v0.2.1/syn > syn && chmod 755 syn && mv syn /usr/local/bin
+
+## haskell
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+~/.ghcup/bin/cabal install hlint
+~/.ghcup/bin/cabal install ormolu
+
 
 # --- link to config in dotfiles/ ---
 rm ~/.zshrc

@@ -34,6 +34,7 @@
 
        :tools
        (debugger +lsp)
+       (eval +overlay)
        lookup
        lsp
        magit
