@@ -1,5 +1,5 @@
 (doom! :completion
-       company
+       (company +childframe)
        (ivy +fuzzy +prescient +childframe +icons)
 
        :ui

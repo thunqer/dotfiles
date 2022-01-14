@@ -5,7 +5,9 @@
 (map! "C-s" '+default/search-buffer
       "C-c k" 'kill-current-buffer
       "C-c s p b" 'switch-to-prev-buffer
-      "C-c C-r" 'revert-buffer)
+      "C-c C-r" 'revert-buffer
+      "C-M-v" 'scroll-other-window
+      "C-M-c" 'scroll-other-window-down)
 (setq! display-line-numbers-type t
        mac-command-modifier 'meta)
 (add-hook! 'emacs-startup-hook 'toggle-frame-fullscreen)
