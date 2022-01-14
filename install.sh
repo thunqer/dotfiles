@@ -52,8 +52,8 @@ curl -Ls https://github.com/stephencelis/syn/releases/download/v0.2.1/syn > syn 
 
 ## haskell
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-~/.ghcup/bin/cabal install hlint
-~/.ghcup/bin/cabal install ormolu
+~/.ghcup/bin/cabal install hlint -v
+~/.ghcup/bin/cabal install ormolu -v
 
 
 # --- link to config in dotfiles/ ---

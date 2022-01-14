@@ -4,7 +4,8 @@
 
 (map! "C-s" '+default/search-buffer
       "C-c k" 'kill-current-buffer
-      "C-c s p b" 'switch-to-prev-buffer)
+      "C-c s p b" 'switch-to-prev-buffer
+      "C-c C-r" 'revert-buffer)
 (setq! display-line-numbers-type t
        mac-command-modifier 'meta)
 (add-hook! 'emacs-startup-hook 'toggle-frame-fullscreen)
@@ -13,6 +14,7 @@
 
 (setq! doom-leader-alt-key "C-d"
        doom-localleader-alt-key "C-d l")
+
 
 ;; Doom module configuration
 
@@ -57,14 +59,12 @@
 ;;; ui
 
 ;;;; doom
-
 (use-package! doom-themes
   :config
   (setq! doom-font (font-spec :family "Iosevka" :size 16)
          doom-variable-pitch-font (font-spec :family "Iosevka" :size 12)
          doom-theme 'doom-nord
-         doom-nord-region-highlight 'frost
-         doom-treemacs-theme 'doom-colors)
+         doom-nord-region-highlight 'frost)
   (custom-theme-set-faces! 'doom-nord
     '(font-lock-type-face :weight bold)
     '(font-lock-function-name-face :weight bold)
@@ -82,9 +82,26 @@
 
 ;;;; modeline
 
-(use-package! doom-modeline
+(setq! +modeline-height 35)
+; sometimes the modeline overflows to the right :/
+(custom-set-faces!
+  '(mode-line :family "Iosevka" :height .91)
+  '(mode-line-inactive :family "Iosevka" :height .91))
+
+;;;; tabs
+
+(use-package! centaur-tabs
+  :bind
+  (("C-9" . centaur-tabs-backward)
+   ("C-0" . centaur-tabs-forward)
+   ("C-8" . centaur-tabs-switch-group))
   :config
-  (setq! doom-modeline-height 40))
+  (centaur-tabs-group-by-projectile-project)
+  (setq centaur-tabs-height 35
+        centaur-tabs-gray-out-icons nil
+        centaur-tabs-set-bar 'under
+        x-underline-at-descent-line t
+        centaur-tabs-set-close-button nil))
 
 ;;;; vc-gutter
 

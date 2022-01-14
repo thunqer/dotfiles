@@ -23,7 +23,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ## python
-PATH="$PATH:/Users/sayeef/Library/Python/3.8/bin"
+PATH=$PATH:$HOME/Library/Python/3.9/bin
 
 ## updating core utils & related
 alias ls="exa -laT --icons --group-directories-first --level=1 --inode --git --ignore-glob=\"Downloads|Documents|Desktop|Library|Movies|Music|Pictures|Public\""

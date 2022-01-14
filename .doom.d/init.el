@@ -1,6 +1,6 @@
 (doom! :completion
        company
-       vertico
+       (ivy +fuzzy +prescient +childframe +icons)
 
        :ui
        (popup +defaults)
@@ -8,11 +8,11 @@
        doom-dashboard
        hl-todo
        indent-guides
-       modeline
+       (modeline +light)
        vc-gutter
        window-select
-       workspaces
        zen
+       tabs
 
        :editor
        file-templates
