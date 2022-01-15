@@ -50,7 +50,7 @@
        (java +lsp)
        (java +lsp)
        (org +pretty +brain)
-       (python +lsp)
+       (python +lsp +pyright)
        (sh +lsp)
        emacs-lisp
        plantuml

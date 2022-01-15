@@ -20,7 +20,7 @@ fi
 ## mostly installing better shell functions
 UPDATED_CORE=(coreutils findutils gnu-sed gnutls grep tmux git cmake)
 MODERN_CORE=(exa du duf broot fd ripgrep tldr cheat gping httpie curlie dog bat)
-OTHER_STUFF=(multimarkdown shellcheck llvm)
+OTHER_STUFF=(multimarkdown shellcheck llvm pandoc)
 brew install "${UPDATED_CORE[@]}"
 brew install "${MODERN_CORE[@]}"
 brew install "${OTHER_STUFF[@]}"
@@ -37,7 +37,7 @@ brew install --cask font-iosevka
 
 ## python stuff - for lsp mode
 pip3 install pyflakes
-pip3 install python-lsp-server
+pip3 install pyright
 
 ## nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash

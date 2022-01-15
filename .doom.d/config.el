@@ -14,6 +14,10 @@
 
 ;; Doom core configuration
 
+(use-package! projectile
+  :bind
+  ("C-c p ," . projectile-add-known-project)
+  ("C-c p ." . projectile-remove-known-project))
 (setq! doom-leader-alt-key "C-d"
        doom-localleader-alt-key "C-d l")
 
@@ -103,7 +107,8 @@
         centaur-tabs-gray-out-icons nil
         centaur-tabs-set-bar 'under
         x-underline-at-descent-line t
-        centaur-tabs-set-close-button nil))
+        centaur-tabs-set-close-button nil
+        centaur-tabs-show-count t))
 
 ;;;; vc-gutter
 
