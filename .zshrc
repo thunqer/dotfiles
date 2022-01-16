@@ -13,6 +13,7 @@ export PATH=/opt/homebrew/bin:$PATH # homebrew - this line needs to be updated d
 export PATH=/opt/homebrew/opt/llvm/bin:$PATH
 export PATH=$PATH:~/.emacs.d/bin/ # doom commands
 export PATH=$PATH:~/.ghcup/bin # ghc - haskell
+export PATH=$PATH:~/.cabal/bin
 export PATH=$PATH:~/dotfiles/bin
 for d in "$(brew --prefix)"/opt/*/libexec/gnubin; do export PATH=$d:$PATH; done
 for d in "$(brew --prefix)"/opt/*/libexec/gnuman; do export MANPATH=$d:$MANPATH; done
@@ -28,6 +29,7 @@ PATH=$PATH:$HOME/Library/Python/3.9/bin
 ## updating core utils & related
 alias ls="exa -laT --icons --group-directories-first --level=1 --inode --git --ignore-glob=\"Downloads|Documents|Desktop|Library|Movies|Music|Pictures|Public\""
 alias lss="exa -lT --icons --group-directories-first --level=1 --inode --git --ignore-glob=\"Downloads|Documents|Desktop|Library|Movies|Music|Pictures|Public\""
+alias lsd="exa -lT --icons --group-directories-first --inode --git --ignore-glob=\"Downloads|Documents|Desktop|Library|Movies|Music|Pictures|Public\""
 alias cat="bat"
 alias du="dust"
 alias df="duf"

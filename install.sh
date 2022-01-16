@@ -38,6 +38,7 @@ brew install --cask font-iosevka
 ## python stuff - for lsp mode
 pip3 install pyflakes
 pip3 install pyright
+pip3 install black
 
 ## nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -53,8 +54,7 @@ curl -Ls https://github.com/stephencelis/syn/releases/download/v0.2.1/syn > syn 
 ## haskell
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ~/.ghcup/bin/cabal install hlint -v
-~/.ghcup/bin/cabal install ormolu -v
-
+~/.ghcup/bin/cabal install brittany -v
 
 # --- link to config in dotfiles/ ---
 rm ~/.zshrc

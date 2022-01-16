@@ -17,6 +17,7 @@
        :editor
        file-templates
        fold
+       format
        multiple-cursors
        snippets
 
@@ -50,7 +51,7 @@
        (java +lsp)
        (java +lsp)
        (org +pretty +brain)
-       (python +lsp +pyright)
+       (python +lsp +pyright +poetry)
        (sh +lsp)
        emacs-lisp
        plantuml

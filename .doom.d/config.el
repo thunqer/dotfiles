@@ -26,6 +26,11 @@
 
 ;;; lang
 
+;;;; haskell
+
+(setq-hook! 'haskell-mode-hook +format-with-lsp nil)
+(add-hook 'haskell-mode-hook #'format-all-mode)
+
 ;;;; java
 
 (after! lsp-java
@@ -36,6 +41,16 @@
           "-XX:+UseG1GC"
           "-XX:+UseStringDeduplication"
           (concat "-javaagent:" (getenv "HOME") "/dotfiles/lib/lombok.jar"))))
+
+
+;;;; python
+
+(use-package! poetry
+  :bind
+  (:map python-mode-map
+   ("C-c l p" . poetry)))
+(setq-hook! 'python-mode-hook +format-with-lsp nil)
+(add-hook 'python-mode-hook #'format-all-mode)
 
 ;;;; org
 
