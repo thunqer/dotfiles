@@ -39,6 +39,9 @@ brew install --cask font-iosevka
 pip3 install pyflakes
 pip3 install pyright
 pip3 install black
+pip3 install pipenv
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+poetry config virtualenvs.in-project true
 
 ## nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash

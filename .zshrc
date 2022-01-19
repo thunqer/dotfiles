@@ -25,6 +25,7 @@ export NVM_DIR="$HOME/.nvm"
 
 ## python
 PATH=$PATH:$HOME/Library/Python/3.9/bin
+export PIPENV_VENV_IN_PROJECT=1
 
 ## updating core utils & related
 alias ls="exa -laT --icons --group-directories-first --level=1 --inode --git --ignore-glob=\"Downloads|Documents|Desktop|Library|Movies|Music|Pictures|Public\""
