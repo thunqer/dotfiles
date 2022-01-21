@@ -45,10 +45,14 @@
 
 ;;;; python
 
+(use-package! pyvenv
+  :bind
+  (:map python-mode-map
+   ("C-c l p e a" . pyvenv-activate)))
 (use-package! poetry
   :bind
   (:map python-mode-map
-   ("C-c l p" . poetry)))
+   ("C-c l p p" . poetry)))
 (setq-hook! 'python-mode-hook +format-with-lsp nil)
 (add-hook 'python-mode-hook #'format-all-mode)
 

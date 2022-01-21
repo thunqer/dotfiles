@@ -54,6 +54,7 @@
        (python +lsp +pyright +poetry)
        (sh +lsp)
        emacs-lisp
+       json
        plantuml
 
        :config
