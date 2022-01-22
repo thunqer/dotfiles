@@ -56,6 +56,7 @@
        emacs-lisp
        json
        plantuml
+       yaml
 
        :config
        (default +bindings +smartparens))

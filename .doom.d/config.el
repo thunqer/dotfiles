@@ -7,7 +7,8 @@
       "C-c s p b" 'switch-to-prev-buffer
       "C-c C-r" 'revert-buffer
       "C-M-v" 'scroll-other-window
-      "C-M-c" 'scroll-other-window-down)
+      "C-M-c" 'scroll-other-window-down
+      "C-'" 'goto-line)
 (setq! display-line-numbers-type t
        mac-command-modifier 'meta)
 (add-hook! 'emacs-startup-hook 'toggle-frame-fullscreen)
@@ -23,6 +24,13 @@
 
 
 ;; Doom module configuration
+
+;;; editor
+
+;;;; snippets
+(after! yasnippet
+  (map! "C-c l i" 'yas-insert-snippet))
+
 
 ;;; lang
 

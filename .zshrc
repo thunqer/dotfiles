@@ -45,6 +45,7 @@ alias dig="dog"
 ## aliases
 alias src="source ~/.zshrc"
 alias tm="tmux attach -t main"
+alias venv="source venv/bin/activate"
 
 ## prompt
 PROMPT='%{$fg[blue]%}[%D{%L:%M:%S %p}] '$PROMPT
