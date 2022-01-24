@@ -1,6 +1,6 @@
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="macovsky"
+ZSH_THEME="sunrise"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 COMPLETION_WAITING_DOTS="true"
 plugins=(git colored-man-pages)
@@ -24,7 +24,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ## python
-PATH=$PATH:$HOME/Library/Python/3.9/bin
+export PATH=$PATH:$HOME/Library/Python/3.9/bin
 export PIPENV_VENV_IN_PROJECT=1
 
 ## updating core utils & related
@@ -46,6 +46,3 @@ alias dig="dog"
 alias src="source ~/.zshrc"
 alias tm="tmux attach -t main"
 alias venv="source venv/bin/activate"
-
-## prompt
-PROMPT='%{$fg[blue]%}[%D{%L:%M:%S %p}] '$PROMPT

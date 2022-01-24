@@ -1,5 +1,6 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
+;; TODO fix force loads with use-package
 ;; Emacs builtin configuration
 
 (map! "C-s" '+default/search-buffer
