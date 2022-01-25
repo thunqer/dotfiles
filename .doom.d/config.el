@@ -18,8 +18,8 @@
 
 (use-package! projectile
   :bind
-  ("C-c p ," . projectile-add-known-project)
-  ("C-c p ." . projectile-remove-known-project))
+  ("C-c p ." . projectile-add-known-project)
+  ("C-c p /" . projectile-remove-known-project))
 (setq! doom-leader-alt-key "C-d"
        doom-localleader-alt-key "C-d l")
 
@@ -55,14 +55,16 @@
 ;;;; python
 
 (use-package! pyvenv
+  :after-call python-mode-hook
   :bind
   (:map python-mode-map
    ("C-c l p e a" . pyvenv-activate)))
 (use-package! poetry
+  :after-call python-mode-hook
   :bind
   (:map python-mode-map
    ("C-c l p p" . poetry)))
-(setq-hook! 'python-mode-hook +format-with-lsp nil)
+(setq-hook! 'python-mode-hook +format-with-lsp nil) ; use the :format module instead of lsp
 (add-hook 'python-mode-hook #'format-all-mode)
 
 ;;;; org
@@ -74,9 +76,9 @@
 (add-hook 'org-mode-hook (lambda() (company-mode -1)))
 
 (use-package! org-brain
+  :after-call org-mode-hook
   :config
   (map! "C-c o b" 'org-brain-visualize))
-
 
 ;;; tools
 
@@ -93,6 +95,8 @@
 ;;; ui
 
 ;;;; doom
+
+; assuming this gets loaded fast anyway so no point in deferring
 (use-package! doom-themes
   :config
   (setq! doom-font (font-spec :family "Iosevka" :size 16)
@@ -124,6 +128,7 @@
 
 ;;;; tabs
 
+; same as doom-themes - no point in trying to defer
 (use-package! centaur-tabs
   :bind
   (("C-9" . centaur-tabs-backward)
