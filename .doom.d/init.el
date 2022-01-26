@@ -49,7 +49,6 @@
        :lang
        (haskell +lsp)
        (java +lsp)
-       (java +lsp)
        (org +pretty +brain)
        (python +lsp +pyright +poetry)
        (sh +lsp)

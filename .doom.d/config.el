@@ -133,7 +133,8 @@
   :bind
   (("C-9" . centaur-tabs-backward)
    ("C-0" . centaur-tabs-forward)
-   ("C-8" . centaur-tabs-switch-group))
+   ("C-8" . centaur-tabs-switch-group)
+   ("C-c \\" . centaur-tabs-toggle-groups))
   :config
   (centaur-tabs-group-by-projectile-project)
   (setq centaur-tabs-height 35
