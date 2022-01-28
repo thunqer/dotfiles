@@ -32,6 +32,16 @@
 (after! yasnippet
   (map! "C-c l i" 'yas-insert-snippet))
 
+;;; emacs
+
+;;;; dired
+
+(use-package! ranger
+  :after dired
+  :bind
+  ("C-c f d" . ranger)
+  :config
+  (setq ranger-show-literal t))
 
 ;;; lang
 
@@ -101,15 +111,14 @@
   :config
   (setq! doom-font (font-spec :family "Iosevka" :size 16)
          doom-variable-pitch-font (font-spec :family "Iosevka" :size 12)
-         doom-theme 'doom-nord
-         doom-nord-region-highlight 'frost)
-  (custom-theme-set-faces! 'doom-nord
-    '(font-lock-type-face :weight bold)
-    '(font-lock-function-name-face :weight bold)
-    '(font-lock-variable-name-face :foreground "#88C0D0" :inherit italic)
-    '(font-lock-comment-face :foreground "#505966" :inherit italic)
-    '(font-lock-builtin-face :foreground "#81a1c1" :weight bold)
-    '(font-lock-keyword-face :foreground "#81a1c1" :weight bold :inherit italic)))
+         doom-theme 'doom-tokyo-storm
+         doom-nord-region-highlight 'frost))
+(custom-theme-set-faces! 'doom-tokyo-storm
+  '(font-lock-function-name-face :foreground "#7aa2f7" :weight bold :inherit italic)
+  '(font-lock-variable-name-face :foreground "#f7768e" :weight bold :inherit italic)
+  '(font-lock-keyword-face :foreground "#73daca" :weight bold)
+  '(font-lock-comment-face :foreground "#51587a" :inherit italic)
+  '(font-lock-builtin-face :foreground "#73daca" :inherit italic))
 
 ;;;; magit
 

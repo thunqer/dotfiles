@@ -5,7 +5,6 @@
        :ui
        (popup +defaults)
        doom
-       doom-dashboard
        hl-todo
        indent-guides
        (modeline +light)
@@ -25,7 +24,6 @@
        (dired +icons +ranger)
        electric
        ibuffer
-       vc
 
        :term
        vterm
@@ -53,6 +51,7 @@
        (python +lsp +pyright +poetry)
        (sh +lsp)
        emacs-lisp
+       javascript
        json
        plantuml
        yaml
