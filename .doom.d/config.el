@@ -97,6 +97,10 @@
 (after! lsp-mode
   (setq! lsp-enable-file-watchers nil))
 
+;;;; tmux
+
+(global-set-key (kbd "C-;") '+tmux/run)
+
 ;;;; vterm
 
 (after! vterm
@@ -118,7 +122,9 @@
   '(font-lock-variable-name-face :foreground "#f7768e" :weight bold :inherit italic)
   '(font-lock-keyword-face :foreground "#73daca" :weight bold)
   '(font-lock-comment-face :foreground "#51587a" :inherit italic)
-  '(font-lock-builtin-face :foreground "#73daca" :inherit italic))
+  '(font-lock-builtin-face :foreground "#73daca" :inherit italic)
+  '(region :background "#73daca" :foreground "black")
+  '(ivy-current-match :inherit region))
 
 ;;;; magit
 

@@ -1,6 +1,6 @@
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="sunrise"
+ZSH_THEME="passion"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 COMPLETION_WAITING_DOTS="true"
 plugins=(git colored-man-pages)
@@ -30,8 +30,6 @@ export PIPENV_VENV_IN_PROJECT=1
 ## updating core utils & related
 alias ls="exa -laT --icons --group-directories-first --level=1 --inode --git --ignore-glob=\"Downloads|Documents|Desktop|Library|Movies|Music|Pictures|Public\""
 alias lss="exa -lT --icons --group-directories-first --level=1 --inode --git --ignore-glob=\"Downloads|Documents|Desktop|Library|Movies|Music|Pictures|Public\""
-alias lsd="exa -lT --icons --group-directories-first --inode --git --ignore-glob=\"Downloads|Documents|Desktop|Library|Movies|Music|Pictures|Public\""
-alias cat="bat"
 alias du="dust"
 alias df="duf"
 alias find="fd"
