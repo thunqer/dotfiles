@@ -47,7 +47,7 @@
        :lang
        (haskell +lsp)
        (java +lsp)
-       (org +pretty +brain)
+       (org +pretty +brain +present)
        (python +lsp +pyright +poetry)
        (sh +lsp)
        emacs-lisp
