@@ -1,6 +1,5 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;; TODO fix force loads with use-package
 ;; Emacs builtin configuration
 
 (map! "C-s" '+default/search-buffer
@@ -23,12 +22,12 @@
 (setq! doom-leader-alt-key "C-d"
        doom-localleader-alt-key "C-d l")
 
-
 ;; Doom module configuration
 
 ;;; editor
 
 ;;;; snippets
+
 (after! yasnippet
   (map! "C-c l i" 'yas-insert-snippet))
 
@@ -128,8 +127,6 @@
 
 ;;;; magit
 
-; TODO figure out why company freezes sometimes
-; not technically magit, but magit-commit takes you to a Text buffer and company freezes sometimes
 (after! magit
   (add-hook 'text-mode-hook (lambda() (company-mode -1))))
 
@@ -148,7 +145,6 @@
   :bind
   (("C-9" . centaur-tabs-backward)
    ("C-0" . centaur-tabs-forward)
-   ("C-8" . centaur-tabs-switch-group)
    ("C-c \\" . centaur-tabs-toggle-groups))
   :config
   (centaur-tabs-group-by-projectile-project)
