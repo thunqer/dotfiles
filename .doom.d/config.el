@@ -81,7 +81,6 @@
 (with-eval-after-load 'org
   (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
   (setq! org-startup-with-inline-images t))
-(add-hook! 'org-mode-hook 'wordsmith-mode)
 (add-hook 'org-mode-hook (lambda() (company-mode -1)))
 
 (use-package! org-brain
