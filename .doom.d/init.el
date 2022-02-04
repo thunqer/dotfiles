@@ -1,6 +1,6 @@
 (doom! :completion
        (company +childframe)
-       (ivy +fuzzy +prescient +childframe +icons)
+       (ivy +childframe +icons)
 
        :ui
        (popup +defaults)

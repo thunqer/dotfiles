@@ -40,7 +40,8 @@
   :bind
   ("C-c f d" . ranger)
   :config
-  (setq ranger-show-literal t))
+  (setq ranger-show-literal t
+        ranger-parent-depth 0))
 
 ;;; lang
 
@@ -59,7 +60,6 @@
           "-XX:+UseG1GC"
           "-XX:+UseStringDeduplication"
           (concat "-javaagent:" (getenv "HOME") "/dotfiles/lib/lombok.jar"))))
-
 
 ;;;; python
 
@@ -102,7 +102,8 @@
 ;;;; vterm
 
 (after! vterm
-  (setq! vterm-shell "/bin/zsh"))
+  (setq! vterm-shell "/bin/zsh")
+  (add-hook 'vterm-mode-hook (lambda() (centaur-tabs-mode -1))))
 
 ;;; ui
 
@@ -113,15 +114,14 @@
   :config
   (setq! doom-font (font-spec :family "Iosevka" :size 16)
          doom-variable-pitch-font (font-spec :family "Iosevka" :size 12)
-         doom-theme 'doom-tokyo-storm
+         doom-theme 'doom-nord
          doom-nord-region-highlight 'frost))
-(custom-theme-set-faces! 'doom-tokyo-storm
-  '(font-lock-function-name-face :foreground "#7aa2f7" :weight bold :inherit italic)
-  '(font-lock-variable-name-face :foreground "#f7768e" :weight bold :inherit italic)
-  '(font-lock-keyword-face :foreground "#73daca" :weight bold)
+(custom-theme-set-faces! 'doom-nord
+  '(font-lock-variable-name-face :foreground "#f28482" :weight bold)
   '(font-lock-comment-face :foreground "#51587a" :inherit italic)
-  '(font-lock-builtin-face :foreground "#73daca" :inherit italic)
-  '(region :background "#73daca" :foreground "black")
+  '(font-lock-function-name-face :foreground "#88C0D0" :weight bold)
+  '(font-lock-type-face :foreground "#8FBCBB" :weight bold)
+  '(line-number :foreground "#51587a")
   '(ivy-current-match :inherit region))
 
 ;;;; magit
@@ -134,8 +134,8 @@
 (setq! +modeline-height 35)
 ; sometimes the modeline overflows to the right :/
 (custom-set-faces!
-  '(mode-line :family "Iosevka" :height .91)
-  '(mode-line-inactive :family "Iosevka" :height .91))
+  '(mode-line :family "Iosevka" :height .85)
+  '(mode-line-inactive :family "Iosevka" :height .85))
 
 ;;;; tabs
 
