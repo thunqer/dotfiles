@@ -40,8 +40,7 @@
   :bind
   ("C-c f d" . ranger)
   :config
-  (setq ranger-show-literal t
-        ranger-parent-depth 0))
+  (setq ranger-show-literal t))
 
 ;;; lang
 
@@ -117,9 +116,9 @@
          doom-theme 'doom-nord
          doom-nord-region-highlight 'frost))
 (custom-theme-set-faces! 'doom-nord
-  '(font-lock-variable-name-face :foreground "#f28482" :weight bold)
+  '(font-lock-variable-name-face :foreground "#D08770" :inherit italic)
   '(font-lock-comment-face :foreground "#51587a" :inherit italic)
-  '(font-lock-function-name-face :foreground "#88C0D0" :weight bold)
+  '(font-lock-function-name-face :foreground "#88C0D0" :inherit italic :weight bold)
   '(font-lock-type-face :foreground "#8FBCBB" :weight bold)
   '(line-number :foreground "#51587a")
   '(ivy-current-match :inherit region))
@@ -134,8 +133,8 @@
 (setq! +modeline-height 35)
 ; sometimes the modeline overflows to the right :/
 (custom-set-faces!
-  '(mode-line :family "Iosevka" :height .85)
-  '(mode-line-inactive :family "Iosevka" :height .85))
+  '(mode-line :family "Iosevka" :height .9)
+  '(mode-line-inactive :family "Iosevka" :height .9))
 
 ;;;; tabs
 
